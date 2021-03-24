@@ -15,14 +15,18 @@
             height: 50px;
         }
     }
-    .advantage {
-        &_title {
-            font-size: 28px;
-        }
+    .consultation {
+        padding: 100px 15px 92px 15px;
+
+    }
+    .title {
+        font-size: 28px;
+        line-height: 35px;
     }
 }
 
-// @media (max-width: 767px)
+// @media (max-width: 767px) 
+
 @media (max-width: 575px) {
     .header {
         &__logo {
@@ -58,13 +62,14 @@
         }
     }
     .advantage {
-        &_title {
-            font-size: 22px;
-        }
         &__icons {
             flex-direction: column;
             align-items: center;
         }
+    }
+    .title {
+        font-size: 22px;
+        line-height: 30px;
     }
 }
 @media (max-width: 374px) {
@@ -97,5 +102,8 @@
         &__icon {
             font-size: 12px;
         }
+    }
+    .consultation {
+        
     }
 }

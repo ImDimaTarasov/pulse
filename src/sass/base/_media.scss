@@ -1,4 +1,18 @@
-// @media (max-width: 1200px) 
+@media (max-width: 1200px) {
+    .carousel {
+        &__inner {
+            img {
+                width: 70%;
+            }
+        }
+        .prev {
+            left: 15px;
+        }
+        .next {
+             right: 15px;
+        } 
+    }
+}
 @media (max-width: 991px) {
     .promo {
         padding: 21px 15px 93px 15px;
@@ -20,12 +34,99 @@
 
     }
     .title {
-        font-size: 28px;
+        font-size: 27px;
         line-height: 35px;
+    }
+    .carousel {
+        &__inner {
+            img {
+                width: 65%;
+            }
+        }
+        .prev {
+            display: none;
+        }
+        .next {
+            display: none;
+        }
+        .tns-nav {
+            display: flex;
+            justify-content: center;    
+            position: relative;
+            button {
+                padding: 0px;
+                border-radius: 100%;
+                margin: 0 1em;
+                width: 1em;
+                height: 1em;
+                background: grey;
+                border: none;
+                outline: white;
+                transition: 0.5s all;
+                               
+            }
+            &-active {
+                background: $main-color !important;
+            }
+        }
+    }
+    .catalog {
+        &__content {
+            padding: 0 10px;
+        }
+        &__tabs {
+            margin-top: 45px;
+        }
+        &__tab {
+            width:  190px;
+            height: 45px;
+            font-size: 15px;
+            line-height: 43px;
+        }   
+        &-item {
+            width: 260px;
+            min-height: 420px;
+            img {
+                height: 170px;
+            }
+            &__subtitle {
+                font-size: 15px;
+            }
+            &__descr {
+                margin-top: 10px;
+                font-size: 13px;
+            }
+            &__content {
+                transform: translateX(-110%);
+                &_active {
+                    transform: translateX(0%);
+                }
+            }
+            li {
+                font-size: 14px;
+                line-height: 16px;
+                margin-bottom: 17px;
+            }
+            &__price {
+                font-size: 16px;
+            }
+            .button_mini {
+                width: 120px;
+                height: 37px;
+            }
+        }
     }
 }
 
-// @media (max-width: 767px) 
+@media (max-width: 767px) {
+    .carousel {
+        &__inner {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
 
 @media (max-width: 575px) {
     .header {
@@ -61,6 +162,10 @@
             font-size: 15px;
         }
     }
+    .consultation {
+        min-height: 550px;
+        padding: 50px 15px 50px 15px;
+    }
     .advantage {
         &__icons {
             flex-direction: column;
@@ -70,6 +175,44 @@
     .title {
         font-size: 22px;
         line-height: 30px;
+    }
+    .carousel {
+        &__inner {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .catalog {
+        padding-bottom: 50px;
+        &__tabs {
+            margin-top: 30px;
+        }
+        &__tab {
+            width: 120px;
+            height: 45px;
+            font-size: 12px;
+        }
+        &__content {
+            margin-top: 40px;
+        }
+    }
+    .reviews {
+        &-tab {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 0 10px;
+            margin-bottom: 60px;
+        }
+        &__text {
+            width: 100%;
+            text-align: center;
+        }
+        &__photo {
+            margin-right: 0;
+            margin-bottom: 5px;
+        }
     }
 }
 @media (max-width: 374px) {
@@ -104,6 +247,6 @@
         }
     }
     // .consultation {
-        
+    //     p
     // }
 }

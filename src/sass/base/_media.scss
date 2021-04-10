@@ -116,6 +116,33 @@
             }
         }
     }
+    .reviews {
+        padding: 0 15px ;
+        &__photo {
+            margin-right: 30px;
+            width: 150px;
+            height: 150px;
+        }
+    }
+    .footer {
+        .map {
+            height: 470px;
+        }
+        &__info {
+            left: unset;
+            transform: unset;
+            right: 0px;
+            width: 350px;
+            height: 220px;
+            padding: 35px 35px 35px 35px;
+        }
+        &__addres {
+            font-size: 17px;
+            line-height: 17px;
+            margin-bottom: 22px;
+        }
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -126,6 +153,18 @@
             }
         }
     }
+    .footer {
+        &__info {
+            width: 350px;
+            height: 220px;
+            padding: 35px 35px 35px 35px;
+        }
+        &__addres {
+            font-size: 17px;
+            line-height: 17px;
+            margin-bottom: 22px;
+        }
+    }   
 }
 
 @media (max-width: 575px) {
@@ -246,7 +285,4 @@
             font-size: 12px;
         }
     }
-    // .consultation {
-    //     p
-    // }
 }

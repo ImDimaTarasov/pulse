@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <!-- example of connecting Slick slider -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/slick.css"/> -->
-    <!-- example of connecting Tiny Slider -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap" rel="stylesheet">
     <title>pulse</title>
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href='#' class="header__logo">
@@ -23,7 +21,7 @@
                 </a>
                 <div class="header__official">
                     Официальный представитель
-                    <span>Garmin, Polar, Suunto</span>
+                    <span >Garmin, Polar, Suunto</span>
                 </div>
                 <div class="header__contacts">
                     <a href="tel: +74999228974" class="header__phone">+7 (499) 922-89-74</a>
@@ -65,17 +63,17 @@
         <div class="container">
             <h2 class="title title_adv">НАШИ ПРЕИМУЩЕСТВА</h2>
             <div class="advantage__icons">
-                <div class="advantage__icon">
+                <div class="advantage__item">
                     <img src="icons/advantages/cup.png" alt="cup">
                     <div class="advantage__title">Делимся опытом</div>
                     <div class="advantage__subtitle">Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
                 </div>
-                <div class="advantage__icon">
-                    <img src="icons/advantages/heart.png" alt="heart">
+                <div class="advantage__item">
+                    <img src="icons/advantages/heart.png" alt="heart" class="advantage__icon advantage__icon_animated">
                     <div class="advantage__title">Заботимся о здоровье</div>
                     <div class="advantage__subtitle">Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</div>
                 </div>
-                <div class="advantage__icon">
+                <div class="advantage__item">
                     <img src="icons/advantages/shoe.png" alt="shoe">
                     <div class="advantage__title">Учим бегать</div>
                     <div class="advantage__subtitle">Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в России - <a href="#">I LOVE RUNNING.</a></div>
@@ -84,7 +82,7 @@
         </div>
     </section>
     <section class="consultation">
-        <div class="container">
+        <div  class="container">
             <h2 class="title title_left">Получите бесплатную консультацию
                 <br> 
                 по подбору пульсометра</h2>
@@ -92,10 +90,10 @@
                     <br>
                     и мы перезвоним вам в течении 10 минут
                 </div>
-                <form class="feed-form" action="#">
-                    <input name="name" required placeholder="Ваше имя" type="text" >
-                    <input name="phone" required placeholder="Ваш телефон" type="number" >
-                    <input name="email" required placeholder="Ваш E-mail" type="email" >
+                <form id="consultation-form" class="feed-form" action="#">
+                    <input name="name" placeholder="Ваше имя" type="text" >
+                    <input name="phone" placeholder="Ваш телефон" >
+                    <input name="email" placeholder="Ваш E-mail" type="email" >
 
                    
                     <button class="button button_submit">заказать консультацию</button>
@@ -369,7 +367,7 @@
         <div class="container">
             <h2 class="title title_reviews">отзывы клиентов</h2>
             <div class="reviews__tabs">
-                <div class="reviews-tab">
+                <div class="reviews-tab animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="img/reviews/Irina.png" alt="Irina" class="reviews__photo">
                     <div class="reviews__text">
                         <div class="reviews__name">Ирина Иванченко </div>
@@ -380,7 +378,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="reviews-tab">
+                <div class="reviews-tab animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="img/reviews/Ivan.png" alt="Ivan" class="reviews__photo">
                     <div class="reviews__text">
                         <div class="reviews__name">Иван Сёмочкин</div>
@@ -391,7 +389,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="reviews-tab">
+                <div class="reviews-tab animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="img/reviews/Yulia.png" alt="Yulia" class="reviews__photo">
                     <div class="reviews__text">
                         <div class="reviews__name">Юлия Дашкина</div>
@@ -407,7 +405,7 @@
     </section>
     <footer class="footer">
         <div class="footer__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4303074593463!2d37.64480731541721!3d55.76839799825723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2spl!4v1617360709311!5m2!1sru!2spl" width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4303074593463!2d37.64480731541721!3d55.76839799825723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2spl!4v1617360709311!5m2!1sru!2spl"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="footer__info">
             <address class="footer__addres">Москва, Мясницкий проезд, д.3с1</address>
@@ -425,9 +423,9 @@
             <div class="modal__subtitle">Просто заполните форму заявки </div>
             <div class="modal__desc">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" required placeholder="Ваше имя" type="text" >
-                <input name="phone" required placeholder="Ваш телефон" type="number" >
-                <input name="email" required placeholder="Ваш E-mail" type="email" >
+                <input name="name"  placeholder="Ваше имя" type="text" >
+                <input name="phone"  placeholder="Ваш телефон" >
+                <input name="email"  placeholder="Ваш E-mail" type="email" >
 
                
                 <button class="button button_submit">заказать консультацию</button>
@@ -439,9 +437,9 @@
             <div class="modal__subtitle">Ваш заказ: </div>
             <div class="modal__desc">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" required placeholder="Ваше имя" type="text" >
-                <input name="phone" required placeholder="Ваш телефон" type="number" >
-                <input name="email" required placeholder="Ваш E-mail" type="email" >
+                <input name="name"  placeholder="Ваше имя" type="text" >
+                <input name="phone"  placeholder="Ваш телефон" >
+                <input name="email"  placeholder="Ваш E-mail" type="email" >
 
                
                 <button class="button button_submit">купить</button>
@@ -454,13 +452,19 @@
             <div class="modal__desc">Наш менеджер свяжется с вами  в ближайшее время!</div>
         </div>
     </div>
-    <!-- example of connecting Slick slider -->
+    
+    <a href="#up" class="pageUp">
+        <img src="icons/arrUp.svg" alt="up">
+    </a>
+    
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script> 
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="js/slick.min.js"></script>
-
-    <!-- example of connecting Tiny Slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
+    
 </body>
 </html>

@@ -1,21 +1,4 @@
 $(document).ready(function() {
-	
-	// example of connecting Slick slider
-//     $('.carousel__inner').slick({
-//         speed: 1000,
-//         // adaptiveHeight: true,
-//         prevArrow: '<button type="button" class="slick-prev"><img src="icons/carouselArrow/left.png"></button>',
-//         nextArrow: '<button type="button" class="slick-next"><img src="icons/carouselArrow/right.png"></button>',
-//         responsive: [
-//             {
-//               breakpoint: 992,
-//               settings: {
-//                 dots: true,
-//                 arrows: false,
-//               }
-//             },
-//           ]
-//       });
 	$('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
 		$(this)
 		.addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
@@ -51,9 +34,76 @@ $(document).ready(function() {
 			$('.overlay, #order').fadeIn('slow');
 		});
 	});
+
+
+	//Validation
+	function valideForms (form) {
+		$(form).validate({
+			rules: {
+				name: {
+					required: true,
+					minlength: 3
+				},
+				email: {
+					required: true,
+					email: true
+				  },
+				phone: "required"
+			},
+			messages: {
+				name: {
+					required: "Введите пожалуйста имя",
+					minlength: jQuery.validator.format('введите минимум {0} символа')
+				},
+				email: "Введите email",
+				phone: "Телефон тоже введите"
+			}
+		});
+	}
+	valideForms('#consultation-form');
+	valideForms('#consultation form');
+	valideForms('#order form');
+
+
+	$('input[name=phone]').mask("+48 (999) 999-999");
+
+	$('form').submit(function(e) {
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function(){
+			$(this).find("input").val("");
+			$('#consultation, #order').fadeOut();
+			$('.overlay, #thanks').fadeIn();
+
+
+			$("form").trigger("reset");
+		});
+		return false;
+	});
+
+
+	//Smooth scroll (pageup)
+
+	$(window).scroll(function() {
+		if($(this).scrollTop() > 1600) {
+			$('.pageUp').fadeIn();
+		} else {
+			$('.pageUp').fadeOut();
+		}
+	});
+
+	$("a[href^='#']").click(function(){
+		const _href = $(this).attr("href");
+		$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+		return false;
+	});
+	
+	new WOW().init();
 });
 
-// example of connecting Tiny Slider
 
 const slider = tns({
     container: '.carousel__inner',
